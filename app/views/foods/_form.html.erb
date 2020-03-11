@@ -1,0 +1,52 @@
+<%= form_with(model: food, local: true) do |form| %>
+  <% if food.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(food.errors.count, "error") %> prohibited this food from being saved:</h2>
+
+      <ul>
+      <% food.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :日付 %>
+    <%= form.date_select :date, id: :food_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :品名 %>
+    <%= form.text_field :title, id: :food_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :内容量 %>
+    <%= form.text_field :internal, id: :food_internal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :カロリー %>
+    <%= form.text_field :cal, id: :food_cal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :p %>
+    <%= form.number_field :p, id: :food_p %>
+  </div>
+
+  <div class="field">
+    <%= form.label :f %>
+    <%= form.number_field :f, id: :food_f %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c %>
+    <%= form.number_field :c, id: :food_c %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit  '内容を記録する' %>
+  </div>
+<% end %>

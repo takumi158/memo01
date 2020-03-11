@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>登録内容の詳細</h1>
+<hr/>
+
+<p>
+  <strong>日付:</strong>
+  <%= @food.date %>
+</p>
+
+<p>
+  <strong>品名:</strong>
+  <%= @food.title %>
+</p>
+
+<p>
+  <strong>内容量:</strong>
+  <%= @food.internal %>
+</p>
+
+<p>
+  <strong>カロリー:</strong>
+  <%= @food.cal %>
+</p>
+
+<p>
+  <strong>P:</strong>
+  <%= @food.p %>
+</p>
+
+<p>
+  <strong>F:</strong>
+  <%= @food.f %>
+</p>
+
+<p>
+  <strong>C:</strong>
+  <%= @food.c %>
+</p>
+
+<CENTER>
+  <%= link_to 'HOME', root_path %> | 
+<%= link_to '編集', edit_food_path(@food) %> |
+<%= link_to '登録内容一覧', foods_path %>
+</CENTER>

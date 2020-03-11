@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<h1>登録内容</h1>
+<hr/>
+<table class="table01">
+  <% @foods.each do |food| %>
+    <thead>
+      <tr>
+        <th></th>
+        <th>品名</th>
+        <th>内容量</th>
+        <th>カロリー</th>
+        <th>P</th>
+        <th>F</th>
+        <th>C</th>
+        <th colspan="1"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><%= food.date %></th>
+        <td label="品名"><p><%= food.title %></p></td>
+        <td label="内容量"><p><%= food.internal %></p></td>
+        <td label="カロリー"><%= food.cal %></td>
+        <td label="P"><%= food.p %></td>
+        <td label="F"><%= food.f %></td>
+        <td label="C"><%= food.c %></td>
+        <td><%= link_to '詳細', food %> | <%= link_to '編集', edit_food_path(food) %> | <%= link_to '削除', food, method: :delete, data: { confirm: '削除してもいいの？' } %></td>
+        <!-- <td><%= link_to '編集', edit_food_path(food) %></td>
+        <td><%= link_to '削除', food, method: :delete, data: { confirm: '削除してもいいの？' } %></td> -->
+      </tr>
+    </tbody>
+    <tr></tr>
+    <% end %>
+  </table>
+<hr/>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>品名</th>
+      <th>内容量</th>
+      <th>カロリー</th>
+      <th>P</th>
+      <th>F</th>
+      <th>C</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foods.each do |food| %>
+      <tr>
+        <td><%= food.date %></td>
+        <td><%= food.title %></td>
+        <td><%= food.internal %></td>
+        <td><%= food.cal %></td>
+        <td><%= food.p %></td>
+        <td><%= food.f %></td>
+        <td><%= food.c %></td>
+        <td><%= link_to '詳細', food %></td>
+        <td><%= link_to '編集', edit_food_path(food) %></td>
+        <td><%= link_to '削除', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+
+<br>
+<CENTER>
+<%= link_to 'HOME', root_path %> |
+<%= link_to '新規登録', new_food_path %>
+</CENTER>

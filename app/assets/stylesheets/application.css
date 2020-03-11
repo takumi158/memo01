@@ -1,0 +1,85 @@
+body{
+  background: linear-gradient(-135deg, #ff5f6d, #ffc371) fixed;
+}
+
+h1,h2,h3,h4,h5,p {
+  text-align:center;
+}
+
+.img {
+  width: 100% ;
+}
+
+.link01 {
+  text-align:center;
+  margin-top: 10px ;
+}
+
+.top01 {
+  /* background-image: url(/assets/01.jpg) */
+}
+
+.top01 h5{
+  color: white ;
+}
+
+.top02 {
+  color: black;/*文字色*/
+  border: solid 2px black;/*線色*/
+  padding: 0.2em;/*文字周りの余白*/
+  border-radius: 0.5em;/*角丸*/
+}
+
+table.table01 {
+	width:100%;
+	border-right:#3EB1C6 solid 1px;
+	border-collapse: collapse;
+}
+table.table01 thead th {
+	background:#3EB1C6;
+	color:#FFF;
+	padding:10px 15px;
+	border-right:#FFF solid 1px;
+	border-bottom:#FFF solid 1px;
+}
+table.table01 thead th:last-child {
+	border-right:#3EB1C6 solid 1px;
+}
+table.table01 tbody th {
+	background:#3EB1C6;
+	color:#FFF;
+	padding:10px 15px;
+	border-bottom:#FFF solid 1px;
+	vertical-align:top;
+}
+table.table01 tbody tr:last-child th {
+	border-bottom:#3EB1C6 solid 1px;
+}
+table.table01 tbody td {
+	background:#FFF;
+	padding:10px 15px;
+	border-left:#3EB1C6 solid 1px;
+	border-bottom:#3EB1C6 solid 1px;
+	vertical-align:top;
+}
+
+@media screen and (max-width: 640px) {
+table.table01 thead {
+	display:none;
+}
+table.table01 tbody th {
+	display:block;
+}
+table.table01 tbody td {
+	display:block;
+}
+table.table01 tbody td::before {
+	content: attr(label);
+	float: left;
+	clear:both;
+	font-weight:bold;
+}
+table.table01 tbody td p {
+	padding-left:6em;
+}
+}
